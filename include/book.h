@@ -21,7 +21,7 @@ namespace LibrarySystem {
             Book();
             Book(const std::string& title, const std::string& author, const std::string& isbn, const std::string& category, int year );
 
-            // dodajemy metody do klasy book
+            // dodajemy metody do klasy Book
             std::string getTitle() const;
             void setTitle(const std::string& title);
             std::string getAuthor() const;
