@@ -30,8 +30,10 @@ namespace LibrarySystem {
             void setIsbn(const std::string& isbn);
             std::string getCategory() const;
             void setCategory(const std::string& category);
+            bool isAvailable() const;
+            void setAvailable(bool available);
             int getYear() const;
-            void setTitle(int year);
+            void setYear(int year);
 
             std::string toString() const;
             bool operator==(const Book& other) const;
