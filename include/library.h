@@ -36,7 +36,8 @@ namespace LibrarySystem {
             // dodajemy metody do klasy Library
             void addBook(const Book& book);
             bool removeBook(const std::string& isbn);
-            Book* findBookByISBN(const std::string& isbn);
+            Book *findBookByISBN(const std::string &isbn);             
+            const Book *findBookByISBN(const std::string &isbn) const; 
             BookCollection findBooksByTitle(const std::string& title);
             BookCollection findBooksByAuthor(const std::string& author);
             BookCollection findBooksByCategory(const std::string& category);
@@ -44,7 +45,8 @@ namespace LibrarySystem {
 
             void addUser(const User& user);
             bool removeUser(UserId id);
-            User* findUserById(UserId id);
+            User *findUserById(UserId id);            
+            const User *findUserById(UserId id) const; 
             User* findUserByEmail(const std::string& email);
             UserCollection getAllUsers() const;
 
@@ -67,8 +69,6 @@ namespace LibrarySystem {
 
             std::string generateReport(ReportType type) const;
 
-            const BookCollection& getBooks() const { return books; }
-            const UserCollection& getUsers() const { return users; }
     };
 
 }
