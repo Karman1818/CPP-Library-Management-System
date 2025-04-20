@@ -1,0 +1,8 @@
+Jan Kowalski;jan.kowalski@gmail.com;1001
+Anna Nowak;anna.nowak@gmail.com;1002
+Piotr Wiśniewski;piotr.wisniewski@gmail.com;1003
+Maria Wójcik;maria.wojcik@gmail.com;1004
+Krzysztof Lewandowski;krzysztof.lewandowski@gmail.com;1005
+Katarzyna Kamińska;katarzyna.kaminska@gmail.com;1006
+Tomasz Zieliński;tomasz.zielinski@gmail.com;1007
+Magdalena Szymańska;magdalena.szymanska@gmail.com;1008

@@ -8,7 +8,7 @@ namespace LibrarySystem {
 
     // Implementujemy konstruktory
 
-    Library::Library():dataPath(DEAFULT_DATA_PATH) {}
+    Library::Library():dataPath(DEFAULT_DATA_PATH) {}
 
     Library::Library(const std::string& dataPath):dataPath(dataPath) {}
 
@@ -56,22 +56,40 @@ namespace LibrarySystem {
 
     BookCollection Library::findBooksByTitle(const std::string &title) {
         BookCollection result;
+        std::string lowerTitle = title;
+        std::transform(lowerTitle.begin(), lowerTitle.end(), lowerTitle.begin(), ::tolower);
         std::copy_if(books.begin(), books.end(), std::back_inserter(result),
-        [&title](const Book &book) { return book.getTitle() == title; });
+        [&lowerTitle](const Book &book) { 
+            std::string bookTitle = book.getTitle();
+            std::transform(bookTitle.begin(), bookTitle.end(), bookTitle.begin(), ::tolower);
+            return bookTitle.find(lowerTitle) != std::string::npos; 
+        });
         return result;
     }
 
     BookCollection Library::findBooksByAuthor(const std::string &author) {
         BookCollection result;
+        std::string lowerAuthor = author;
+        std::transform(lowerAuthor.begin(), lowerAuthor.end(), lowerAuthor.begin(), ::tolower);
         std::copy_if(books.begin(), books.end(), std::back_inserter(result),
-        [&author](const Book &book) { return book.getAuthor() == author; });
+        [&lowerAuthor](const Book &book) { 
+            std::string bookAuthor = book.getAuthor();
+            std::transform(bookAuthor.begin(), bookAuthor.end(), bookAuthor.begin(), ::tolower);
+            return bookAuthor.find(lowerAuthor) != std::string::npos; 
+        });
         return result;
     }
 
     BookCollection Library::findBooksByCategory(const std::string &category) {
         BookCollection result;
+        std::string lowerCategory = category;
+        std::transform(lowerCategory.begin(), lowerCategory.end(), lowerCategory.begin(), ::tolower);
         std::copy_if(books.begin(), books.end(), std::back_inserter(result),
-        [&category](const Book &book) { return book.getCategory() == category; });
+        [&lowerCategory](const Book &book) { 
+            std::string bookCategory = book.getCategory();
+            std::transform(bookCategory.begin(), bookCategory.end(), bookCategory.begin(), ::tolower);
+            return bookCategory.find(lowerCategory) != std::string::npos; 
+        });
         return result;
     }
 
@@ -141,7 +159,7 @@ namespace LibrarySystem {
     bool Library::rentBook(UserId userId, const std::string &isbn) {
         User* user = findUserById(userId);
         Book* book = findBookByISBN(isbn);
-        if (user && book && !book->isAvailable()) {
+        if (user && book && book->isAvailable()) {
             activeRentals.push_back(std::make_pair(user, book));
             book->setAvailable(false);
             return true;

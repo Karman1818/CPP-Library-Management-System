@@ -9,5 +9,5 @@
 typedef int UserId;
 
 // stałe systemowe
-const std::string DEAFULT_DATA_PATH = "./data/";
+const std::string DEFAULT_DATA_PATH = "./data/";
 const int MAX_RENTAL_PERIOD = 14;
