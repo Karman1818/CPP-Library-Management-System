@@ -75,9 +75,8 @@ void displayReportMenu()
 {
     std::cout << "\n===== Reports =====\n";
     std::cout << "1. Popular Books\n";
-    std::cout << "2. Overdue Rentals\n";
-    std::cout << "3. User Activity\n";
-    std::cout << "4. Return to Main Menu\n";
+    std::cout << "2. User Activity\n";
+    std::cout << "3. Return to Main Menu\n";
     std::cout << "===================\n";
 }
 
