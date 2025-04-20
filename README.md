@@ -81,11 +81,14 @@ CPPLibrary/
 │   ├── main.cpp
 │   ├── library.cpp
 │   ├── book.cpp
-│   └── user.cpp
+│   ├── user.cpp
+│   └── utils.cpp
 ├── include/
 │   ├── library.h
 │   ├── book.h
-│   └── user.h
+│   ├── user.h
+│   ├── utils.h
+│   └── constants.h
 └── data/
     ├── books.txt
     └── users.txt
