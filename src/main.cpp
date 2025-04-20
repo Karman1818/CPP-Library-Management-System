@@ -123,7 +123,7 @@ void handleBookManagement(Library &library)
         switch (choice)
         {
         case 1:
-        { // Dodaj książkę
+        { // Dodaj ksiazke
             std::string title, author, isbn, category;
             int year;
 
@@ -155,7 +155,7 @@ void handleBookManagement(Library &library)
             break;
         }
         case 2:
-        { // Usuń książkę
+        { // Usun ksiazke
             std::string isbn;
             std::cout << "Enter ISBN of the book to remove: ";
             std::getline(std::cin, isbn);
@@ -171,7 +171,7 @@ void handleBookManagement(Library &library)
             break;
         }
         case 3:
-        { // Znajdź książkę po ISBN
+        { // Znajdz ksiazke po isbn
             std::string isbn;
             std::cout << "Enter ISBN: ";
             std::getline(std::cin, isbn);
@@ -188,7 +188,7 @@ void handleBookManagement(Library &library)
             break;
         }
         case 4:
-        { // Znajdź książki po tytule
+        { // Znajdz ksiazki po tytule
             std::string title;
             std::cout << "Enter title: ";
             std::getline(std::cin, title);
@@ -209,7 +209,7 @@ void handleBookManagement(Library &library)
             break;
         }
         case 5:
-        { // Znajdź książki po autorze
+        { // Znajdz ksiazki po autorze
             std::string author;
             std::cout << "Enter author: ";
             std::getline(std::cin, author);
@@ -230,7 +230,7 @@ void handleBookManagement(Library &library)
             break;
         }
         case 6:
-        { // Znajdź książki po kategorii
+        { // Znajdz ksiazki po kategorii
             std::string category;
             std::cout << "Enter category: ";
             std::getline(std::cin, category);
@@ -251,7 +251,7 @@ void handleBookManagement(Library &library)
             break;
         }
         case 7:
-        { // Wyświetl wszystkie książki
+        { // Wyswietl wszystkie ksiazki
             BookCollection books = library.getAllBooks();
             if (books.empty())
             {
@@ -268,7 +268,7 @@ void handleBookManagement(Library &library)
             break;
         }
         case 8:
-        { // Sortuj książki
+        { // Sortuj ksiazki
             bool returnToBookMenu = false;
             while (!returnToBookMenu)
             {
@@ -314,7 +314,7 @@ void handleBookManagement(Library &library)
                     }
                     break;
                 }
-                case 6: // Powrót do menu książek
+                case 6: // Powrot do menu ksiazek
                     returnToBookMenu = true;
                     break;
                 default:
@@ -323,7 +323,7 @@ void handleBookManagement(Library &library)
             }
             break;
         }
-        case 9: // Powrót do menu głównego
+        case 9: // Powrot do menu glownego
             returnToMain = true;
             break;
         default:
@@ -346,7 +346,7 @@ void handleUserManagement(Library &library)
         switch (choice)
         {
         case 1:
-        { // Dodaj użytkownika
+        { // Dodaj uzytkownika
             std::string name, email;
             UserId id;
 
@@ -366,7 +366,7 @@ void handleUserManagement(Library &library)
             std::cin >> id;
             clearInputBuffer();
 
-            // Sprawdź czy ID już istnieje
+            // Sprawdz czy ID juz istnieje
             if (library.findUserById(id))
             {
                 std::cout << "User ID already exists." << std::endl;
@@ -379,7 +379,7 @@ void handleUserManagement(Library &library)
             break;
         }
         case 2:
-        { // Usuń użytkownika
+        { // Usun uzytkownika
             UserId id;
             std::cout << "Enter ID of the user to remove: ";
             std::cin >> id;
@@ -396,7 +396,7 @@ void handleUserManagement(Library &library)
             break;
         }
         case 3:
-        { // Znajdź użytkownika po ID
+        { // Znajdz uzytkownika po ID
             UserId id;
             std::cout << "Enter ID: ";
             std::cin >> id;
@@ -414,7 +414,7 @@ void handleUserManagement(Library &library)
             break;
         }
         case 4:
-        { // Znajdź użytkownika po email
+        { // Znajdz uzytkownika po emailu
             std::string email;
             std::cout << "Enter email: ";
             std::getline(std::cin, email);
@@ -431,7 +431,7 @@ void handleUserManagement(Library &library)
             break;
         }
         case 5:
-        { // Wyświetl wszystkich użytkowników
+        { // wyswietl wszystkich uzytkownikow
             UserCollection users = library.getAllUsers();
             if (users.empty())
             {
@@ -448,7 +448,7 @@ void handleUserManagement(Library &library)
             break;
         }
         case 6:
-        { // Sortuj użytkowników
+        { // Sortuj uzytkownikow
             bool returnToUserMenu = false;
             while (!returnToUserMenu)
             {
@@ -468,11 +468,11 @@ void handleUserManagement(Library &library)
                     library.sortUsersByEmail();
                     std::cout << "Users sorted by email." << std::endl;
                     break;
-                case 3: // Sortuj po liczbie wypożyczonych książek
+                case 3: // Sortuj po liczbie wypozyczonych ksiazek
                     library.sortUsersByRentedBooksCount();
                     std::cout << "Users sorted by rented books count." << std::endl;
                     break;
-                case 4: // Powrót do menu użytkowników
+                case 4: // Powrot do menu uzytkownikow
                     returnToUserMenu = true;
                     break;
                 default:
@@ -481,7 +481,7 @@ void handleUserManagement(Library &library)
             }
             break;
         }
-        case 7: // Powrót do menu głównego
+        case 7: // Powrot do menu glownego
             returnToMain = true;
             break;
         default:
@@ -504,7 +504,7 @@ void handleRentals(Library &library)
         switch (choice)
         {
         case 1:
-        { // Wypożycz książkę
+        { // Wypożycz ksiazke
             UserId userId;
             std::string isbn;
 
@@ -526,7 +526,7 @@ void handleRentals(Library &library)
             break;
         }
         case 2:
-        { // Zwróć książkę
+        { // Zwróć ksiazke
             UserId userId;
             std::string isbn;
 
@@ -548,7 +548,7 @@ void handleRentals(Library &library)
             break;
         }
         case 3:
-        { // Wyświetl aktywne wypożyczenia
+        { // Wyswietl aktywne wypozyczenia
             RentalCollection rentals = library.getActiveRentals();
             if (rentals.empty())
             {
@@ -589,16 +589,13 @@ void handleReports(Library &library)
 
         switch (choice)
         {
-        case 1: // Popularne książki
+        case 1: // Popularne ksiazki
             std::cout << library.generateReport(ReportType::POPULAR_BOOKS) << std::endl;
             break;
-        case 2: // Przeterminowane wypożyczenia
-            std::cout << library.generateReport(ReportType::OVERDUE_RENTALS) << std::endl;
-            break;
-        case 3: // Aktywność użytkowników
+        case 2: // Aktywnosc uzytkownikow
             std::cout << library.generateReport(ReportType::USER_ACTIVITY) << std::endl;
             break;
-        case 4: // Powrót do menu głównego
+        case 3: // Powrot do menu glownego
             returnToMain = true;
             break;
         default:
@@ -612,7 +609,7 @@ int main(int argc, char *argv[])
     std::string dataPath = DEFAULT_DATA_PATH;
     bool adminMode = false;
 
-    // Przetwarzanie argumentów wiersza poleceń
+    // Przetwarzanie argumentow wiersza polecen
     for (int i = 1; i < argc; i++)
     {
         std::string arg = argv[i];
@@ -633,7 +630,7 @@ int main(int argc, char *argv[])
 
     Library library(dataPath);
 
-    // Sprawdź czy katalog istnieje, jeśli nie - utwórz go
+    // Sprawdź czy katalog istnieje jeśli nie to utwórz go
     fs::path dataDir(dataPath);
     if (!fs::exists(dataDir)) {
         fs::create_directories(dataDir);

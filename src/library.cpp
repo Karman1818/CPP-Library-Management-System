@@ -340,10 +340,6 @@ namespace LibrarySystem {
             }
             break;
         }
-        case ReportType::OVERDUE_RENTALS:
-            report << "=== REPORT: OVERDUE RENTALS ===" << std::endl;
-            report << "This functionality requires implementation of rental date tracking." << std::endl;
-            break;
         case ReportType::USER_ACTIVITY:
         {
             report << "=== REPORT: USER ACTIVITY ===" << std::endl;
