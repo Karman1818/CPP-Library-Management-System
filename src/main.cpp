@@ -24,6 +24,13 @@ void handleReports(Library &library);
 
 void displayMainMenu()
 {
+    std::cout << "  _________.__                        .____    ._____." << std::endl;
+    std::cout << " /   _____/|__| ____   _____ _____    |    |   |__\\_ |______________ _______ ___.__." << std::endl;
+    std::cout << " \\_____  \\ |  |/ ___\\ /     \\\\__  \\   |    |   |  || __ \\_  __ \\__  \\\\_  __ <   |  |" << std::endl;
+    std::cout << " /        \\|  / /_/  >  Y Y  \\/ __ \\_ |    |___|  || \\_\\ \\  | \\// __ \\|  | \\/\\___  |" << std::endl;
+    std::cout << "/_______  /|__\\___  /|__|_|  (____  / |_______ \\__||___  /__|  (____  /__|   / ____|" << std::endl;
+    std::cout << "        \\/   /_____/       \\/     \\/          \\/       \\/           \\/       \\/" << std::endl;
+    
     std::cout << "\n===== Library Management System =====\n";
     std::cout << "1. Book Management\n";
     std::cout << "2. User Management\n";

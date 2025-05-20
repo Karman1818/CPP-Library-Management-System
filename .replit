@@ -1,0 +1,20 @@
+modules = ["cpp-clang14"]
+
+[nix]
+channel = "stable-24_05"
+
+[workflows]
+runButton = "Run"
+
+[[workflows.workflow]]
+name = "Run"
+author = 41738100
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "g++ -std=c++17 -I./include src/*.cpp -o main"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "./main"
