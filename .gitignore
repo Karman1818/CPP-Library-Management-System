@@ -1,0 +1,19 @@
+# C/C++ compilation artifacts
+*.o
+*.obj
+*.exe
+*.out
+*.app
+main
+
+# Replit & Language Server cache
+.ccls-cache/
+.clangd/
+
+# IDE & Editor files
+.idea/
+.vscode/
+cmake-build-*/
+*.swp
+.DS_Store
+Thumbs.db
