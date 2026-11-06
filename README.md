@@ -142,8 +142,8 @@ CPPLibrary/
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Karman1818/CPPLibrary.git
-   cd CPPLibrary
+   git clone https://github.com/Karman1818/CPP-Library-Management-System.git
+   cd CPP-Library-Management-System
    ```
 
 2. **Compile the source code:**
@@ -196,8 +196,8 @@ Solaris;Stanisław Lem;9788308073384;Science Fiction;1961
 ### `users.txt`
 ```text
 name;email;id
-Jan Kowalski;jan.kowalski@gmail.com;1001
-Anna Nowak;anna.nowak@gmail.com;1002
+John Doe;john.doe@example.com;1001
+Jane Smith;jane.smith@example.com;1002
 ```
 
 ---
@@ -214,4 +214,5 @@ The system provides an automated report generation engine (`ReportType` enum):
 
 - **Author**: Marceli Karman ([@Karman1818](https://github.com/Karman1818))
 - **License**: Released under the [MIT License](LICENSE).
+
 
