@@ -189,8 +189,8 @@ Data is stored in human-readable plain text files using semicolon (`;`) delimite
 ### `books.txt`
 ```text
 title;author;isbn;category;year
-Ostatnie życzenie;Andrzej Sapkowski;9788375780635;Fantasy;1993
-Solaris;Stanisław Lem;9788308073384;Science Fiction;1961
+The Witcher: The Last Wish;Andrzej Sapkowski;9788375780635;Fantasy;1993
+Solaris;Stanislaw Lem;9788308073384;Science Fiction;1961
 ```
 
 ### `users.txt`
